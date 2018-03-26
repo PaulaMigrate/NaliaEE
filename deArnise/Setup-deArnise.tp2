@@ -19,7 +19,7 @@ ALWAYS
   END
 
    
-  ACTION_DEFINE_ARRAY deArnise_reload BEGIN Setup-deArnise END
+  ACTION_DEFINE_ARRAY deArnise_reload BEGIN setup END
 
   LAF HANDLE_CHARSETS
     INT_VAR
@@ -27,6 +27,7 @@ ALWAYS
     STR_VAR
       tra_path = EVAL ~%MOD_FOLDER%~
       reload_array = deArnise_reload
+	  iconv_path =~deArnise/iconv~
   END
 
 END
