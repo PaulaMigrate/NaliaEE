@@ -19,15 +19,19 @@ ALWAYS
   END
 
    
-  ACTION_DEFINE_ARRAY deArnise_reload BEGIN setup END
+// Character encoding conversion for BG2EE
+  ACTION_DEFINE_ARRAY deArnise_noconvert BEGIN END
+  // any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+  ACTION_DEFINE_ARRAY deArnise_reload BEGIN Setup-deArnise END
 
   LAF HANDLE_CHARSETS
     INT_VAR
       infer_charsets = 1
     STR_VAR
+      // Translation folders and iconv folder are directly in the mod folder
       tra_path = EVAL ~%MOD_FOLDER%~
+      noconvert_array = deArnise_noconvert
       reload_array = deArnise_reload
-	  iconv_path =~deArnise/iconv~
   END
 
 END
