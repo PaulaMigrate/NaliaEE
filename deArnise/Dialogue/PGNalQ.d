@@ -1162,3 +1162,9 @@ CHAIN IF WEIGHT #-1 ~!Global("MadamUpset","GLOBAL",1) InParty("Nalia") InMyArea(
 == NALIAJ @415
 END
 IF ~~ DO ~SetGlobal("MadamUpset","GLOBAL",1)~ EXTERN MADAM 17
+
+ADD_STATE_TRIGGER NaliaJ 27
+~AreaCheck("ar1303")~
+
+ADD_STATE_TRIGGER NaliaJ 223
+~AreaCheck("ar1301")~
