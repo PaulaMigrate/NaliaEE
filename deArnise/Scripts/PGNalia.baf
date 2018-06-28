@@ -14,6 +14,18 @@ RESPONSE #100
 SetGlobal("PGNaliaMatch","GLOBAL",1)
 END
 
+IF
+	Global("NaliaMessage","GLOBAL",0)
+	!GlobalGT("NaliaMessenger","GLOBAL",10)
+	!Exists("NALIAMES") 
+	InParty(Myself)
+	Global("PGMessmiss","Locals",0)
+	THEN
+RESPONSE #100
+SetGlobal("PGMessmiss","Locals",1)
+SetGlobalTimer("NaliaMessenger","GLOBAL",TWO_DAYS)
+END
+
 // Nalia is(was) a vampire
 IF
 !InParty(Myself)
