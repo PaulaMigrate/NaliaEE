@@ -19,6 +19,7 @@ Global("NaliaMessage","GLOBAL",0)
 !GlobalGT("NaliaMessenger","GLOBAL",10)
 !Exists("NALIAMES") 
 InParty(Myself)
+Dead("Torgal")
 Global("PGMessmiss","Locals",0)
 THEN
 RESPONSE #100
