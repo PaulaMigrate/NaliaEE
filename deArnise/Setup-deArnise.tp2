@@ -4,7 +4,7 @@ BACKUP ~deArnise/Backup~
 SUPPORT ~PaulaMigrate@mail.com~
 
 
-VERSION ~v6~
+VERSION ~v6.2~
 
 ALWAYS
   ACTION_IF GAME_IS ~eet~ BEGIN
@@ -192,4 +192,8 @@ COPY ~deArnise/Audio~ ~override~
 
 ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
 COPY ~deArnise/PVRZ~ ~override~
+END
+
+ACTION_IF GAME_IS ~eet~ BEGIN
+EXTEND_TOP ~Nali25.bcs~ ~deArnise/Scripts/PGNalia.baf~ EVALUATE_BUFFER
 END
