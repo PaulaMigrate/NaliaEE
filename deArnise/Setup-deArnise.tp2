@@ -196,4 +196,5 @@ END
 
 ACTION_IF GAME_IS ~eet~ BEGIN
 EXTEND_TOP ~Nali25.bcs~ ~deArnise/Scripts/PGNalia.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~Naliad.bcs~ ~deArnise/Scripts/PGNaliaDToB.baf~ EVALUATE_BUFFER
 END
